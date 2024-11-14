@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Text Around Semicircle</title>
+  <style>
+    /* Estilos generales */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Contenedor del semicírculo */
+    .semicircle-container {
+      position: relative;
+      width: 300px;
+      height: 150px;
+      border-radius: 300px 300px 0 0;
+      background: radial-gradient(circle at bottom, #555, #333);
+      overflow: hidden;
+    }
+
+    /* Texto rotatorio */
+    .semicircle-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #fff;
+      transform-origin: center bottom;
+      animation: rotate 10s linear infinite;
+    }
+
+    /* Posiciones de cada palabra en el semicírculo */
+    .text1 { transform: rotate(0deg) translate(120px); }
+    .text2 { transform: rotate(30deg) translate(120px); }
+    .text3 { transform: rotate(60deg) translate(120px); }
+    .text4 { transform: rotate(90deg) translate(120px); }
+    .text5 { transform: rotate(120deg) translate(120px); }
+    .text6 { transform: rotate(150deg) translate(120px); }
+    .text7 { transform: rotate(180deg) translate(120px); }
+
+    /* Animación de rotación */
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(180deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor principal del semicírculo -->
+  <div class="semicircle-container">
+    <!-- Cada texto con su posición alrededor del semicírculo -->
+    <div class="semicircle-text text1">palabra1</div>
+    <div class="semicircle-text text2">palabra2</div>
+    <div class="semicircle-text text3">palabra3</div>
+    <div class="semicircle-text text4">palabra4</div>
+    <div class="semicircle-text text5">palabra5</div>
+    <div class="semicircle-text text6">palabra6</div>
+    <div class="semicircle-text text7">palabra7</div>
+  </div>
+
+</body>
+</html>
