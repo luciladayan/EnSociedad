@@ -1,74 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rotating Text Around Semicircle</title>
-  <style>
-    /* Estilos generales */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f8f8f8;
-      font-family: Arial, sans-serif;
-    }
-    
-    /* Contenedor del semicírculo */
-    .semicircle-container {
-      position: relative;
-      width: 300px;
-      height: 150px;
-      border-radius: 300px 300px 0 0;
-      background: radial-gradient(circle at bottom, #555, #333);
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización de Eventos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
-    /* Texto rotatorio */
-    .semicircle-text {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      color: #fff;
-      transform-origin: center bottom;
-      animation: rotate 10s linear infinite;
-    }
+        .header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5rem;
+        }
 
-    /* Posiciones de cada palabra en el semicírculo */
-    .text1 { transform: rotate(0deg) translate(120px); }
-    .text2 { transform: rotate(30deg) translate(120px); }
-    .text3 { transform: rotate(60deg) translate(120px); }
-    .text4 { transform: rotate(90deg) translate(120px); }
-    .text5 { transform: rotate(120deg) translate(120px); }
-    .text6 { transform: rotate(150deg) translate(120px); }
-    .text7 { transform: rotate(180deg) translate(120px); }
+        .section {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
 
-    /* Animación de rotación */
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(180deg); }
-    }
-  </style>
+        .content {
+            max-width: 800px;
+            text-align: justify;
+        }
+
+        .highlight {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .highlight-item {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            width: 150px;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border: 5px solid #000;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="header">Organización de Eventos de Alta Calidad</div>
 
-  <!-- Contenedor principal del semicírculo -->
-  <div class="semicircle-container">
-    <!-- Cada texto con su posición alrededor del semicírculo -->
-    <div class="semicircle-text text1">palabra1</div>
-    <div class="semicircle-text text2">palabra2</div>
-    <div class="semicircle-text text3">palabra3</div>
-    <div class="semicircle-text text4">palabra4</div>
-    <div class="semicircle-text text5">palabra5</div>
-    <div class="semicircle-text text6">palabra6</div>
-    <div class="semicircle-text text7">palabra7</div>
-  </div>
+    <div class="section">
+        <div class="content">
+            <p>Nuestra misión es crear eventos únicos con una estética elegante y profesional. Cada detalle está cuidado para garantizar una experiencia inolvidable. Nos especializamos en eventos corporativos, bodas y celebraciones privadas, ofreciendo un enfoque personalizado y de lujo.</p>
+        </div>
+    </div>
 
+    <div class="section highlight">
+        <div class="highlight-item">Bar Netu</div>
+        <div class="highlight-item">Bat Kali</div>
+        <div class="highlight-item">Conferencias</div>
+        <div class="highlight-item">Recepciones</div>
+    </div>
+
+    <div class="section image-gallery">
+        <img src="image1.jpg" alt="Evento 1">
+        <img src="image2.jpg" alt="Evento 2">
+        <img src="image3.jpg" alt="Evento 3">
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Organización de Eventos. Todos los derechos reservados.
+    </div>
 </body>
 </html>
